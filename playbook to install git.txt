@@ -1,0 +1,13 @@
+---
+- name: installing git
+  hosts: all
+  become: true
+  tasks:
+     - name: update server
+       apt:
+         update_cache: yes
+
+     - name: install git
+       apt: 
+          name: git
+          state: present
